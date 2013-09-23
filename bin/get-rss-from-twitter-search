@@ -11,7 +11,8 @@ Perinci::CmdLine->new(
     url => '/RSS/From/Twitter/Search/get_rss_from_twitter_search')->run;
 
 1;
-# ABSTRACT: Generate RSS from Twitter search result page
+#ABSTRACT: Generate RSS from Twitter search result page
+#PODNAME: get-rss-from-twitter-search
 
 =head1 SYNOPSIS
 
