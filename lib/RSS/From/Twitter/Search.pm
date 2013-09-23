@@ -1,6 +1,6 @@
 package RSS::From::Twitter::Search;
 
-use 5.010;
+use 5.010001;
 use strict;
 use warnings;
 use Log::Any qw($log);
@@ -96,6 +96,7 @@ sub get_rss_from_twitter_search {
     push @rss, "<lastBuildDate>",
         POSIX::strftime($datefmt, gmtime),
               "</lastBuildDate>\n";
+    push @rss, "\n";
 
     my $tweets = $dom->find("div.tweet");
     for my $tweet (@$tweets) {
@@ -103,7 +104,7 @@ sub get_rss_from_twitter_search {
         my ($url) = $html =~ m!(/[^/]+/status/\d+)!;
         my $fullname = $tweet->find(".fullname")->text;
         my ($username) = $tweet->find(".username") =~ m!<b>(.+)</b>!;
-        my $text = $tweet->find(".tweet-text")->text;
+        my $text = $tweet->find(".tweet-text"); $text = "$text"; $text =~ s!<.+?>!!sg;
         my ($time) = $tweet->find(".tweet-timestamp") =~ /data-time="(\d+)"/;
 
         push @rss, "<item>\n";
