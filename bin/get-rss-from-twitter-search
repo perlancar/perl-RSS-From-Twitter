@@ -1,0 +1,51 @@
+#!/usr/bin/perl
+
+# workaround for dzil
+package get_rss_from_forum;
+
+# VERSION
+
+use 5.010;
+use strict;
+use warnings;
+
+use Perinci::CmdLine;
+Perinci::CmdLine->new(
+    url => '/RSS/From/Forum/vBulletin/get_rss_from_forum')->run;
+
+1;
+# ABSTRACT: Get RSS from vBulletin forum
+__END__
+
+=head1 SYNOPSIS
+
+ $ get_rss_from_vbulletin_forum http://example.com/forum/forumdisplay.php?f=9
+ <?xml version="1.0" encoding="UTF-8"?>
+ <!-- generator="RSS::From::Forum::vBulletin 0.01 (Perl module)" -->
+ <rss version="2.0">
+   <channel>
+     <title>...</title>
+     <link>http://example.com/forum/forumdisplay.php?f=9#rss</link>
+     <generator>...</generator>
+
+     <item>
+       <title>...</title>
+       <link>http://example.com/forum/showthread.php?t=14445</link>
+       <pubDate>...</pubDate>
+       <description>...</description>
+     </item>
+     ...
+
+   </channel>
+ </rss>
+
+
+=head1 DESCRIPTION
+
+See L<RSS::From::Forum::vBulletin> for more details, including available
+options.
+
+
+=head1 SEE ALSO
+
+=cut
