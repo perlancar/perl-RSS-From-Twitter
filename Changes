@@ -1,6 +1,6 @@
 Revision history for RSS-From-Twitter-Search
 
-0.02    2013-09-24 (SHARYANTO) (not yet released)
+0.02    2013-09-24 (SHARYANTO)
 
         - Rename dist from RSS-From-Twitter{-Search,}. Add general function
           get_rss_from_twitter (accepts URL, which can also be a file:// URL) as
