@@ -8,10 +8,10 @@ use warnings;
 
 use Perinci::CmdLine;
 Perinci::CmdLine->new(
-    url => '/RSS/From/Twitter/Search/get_rss_from_twitter_search')->run;
+    url => '/RSS/From/Twitter/get_rss_from_twitter_search')->run;
 
 1;
-#ABSTRACT: Generate RSS from Twitter search result page
+#ABSTRACT: Convert Twitter search result page to RSS
 #PODNAME: get-rss-from-twitter-search
 
 =head1 SYNOPSIS
@@ -46,10 +46,15 @@ Perinci::CmdLine->new(
 
 =head1 DESCRIPTION
 
-See L<RSS::From::Forum::vBulletin> for more details, including available
-options.
+See L<RSS::From::Twitter> for more details, including available options.
 
 
 =head1 SEE ALSO
+
+L<get-rss-from-twitter>
+
+L<get-rss-from-twitter-list>
+
+L<get-rss-from-twitter-user>
 
 =cut
