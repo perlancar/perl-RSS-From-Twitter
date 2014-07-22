@@ -6,8 +6,8 @@ use 5.010;
 use strict;
 use warnings;
 
-use Perinci::CmdLine;
-Perinci::CmdLine->new(
+use Perinci::CmdLine::Any;
+Perinci::CmdLine::Any->new(
     url => '/RSS/From/Twitter/get_rss_from_twitter_user')->run;
 
 1;
