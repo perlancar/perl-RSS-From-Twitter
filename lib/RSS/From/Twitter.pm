@@ -1,5 +1,8 @@
 package RSS::From::Twitter;
 
+# DATE
+# VERSION
+
 use 5.010001;
 use strict;
 use warnings;
@@ -21,9 +24,12 @@ our @EXPORT_OK = qw(
                        get_rss_from_twitter_user
                );
 
-# VERSION
-
 our %SPEC;
+
+$SPEC{':package'} = {
+    v => 1.1,
+    summary => 'Convert Twitter page to RSS',
+};
 
 my %common_args = (
     ua => {
@@ -247,7 +253,7 @@ sub get_rss_from_twitter_user {
 }
 
 1;
-#ABSTRACT: Convert Twitter page to RSS
+#ABSTRACT:
 
 =head1 SYNOPSIS
 
