@@ -6,7 +6,7 @@ package RSS::From::Twitter;
 use 5.010001;
 use strict;
 use warnings;
-use Log::Any::IfLOG qw($log);
+use Log::ger;
 
 use HTML::Entities;
 use LWP::UserAgent;
